@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>너만 그래? 데이터 삭제 안내</title>
+<!-- 배포: ainers1/app-policies 저장소 neoman/ 폴더. multi-app-api.multi-app-backend.workers.dev 는 서버 배포 후 실제 주소로 바꾼다 -->
+<style>
+  body{font-family:system-ui,-apple-system,'Noto Sans KR',sans-serif;max-width:720px;margin:40px auto;padding:0 20px;line-height:1.75;color:#24263a}
+  h1{font-size:26px} h2{font-size:19px;margin-top:32px} .muted{color:#7d8096;font-size:14px}
+  hr{border:none;border-top:1px solid #e6e7ef;margin:40px 0} a{color:#5b45d6}
+  .box{background:#f5f5fa;border-radius:12px;padding:14px 18px}
+</style>
+</head><body>
+<h1>너만 그래? 데이터 삭제 안내</h1>
+<p class="muted">앱: 너만 그래? (Android, com.ainers1.neoman) · 개발자: 스토어 등록정보의 개발자</p>
+
+<h2>계정 및 데이터 삭제 요청 방법 (요약)</h2>
+<p>너만 그래?는 회원가입 없이 게스트로 시작하고, 구글 로그인은 선택입니다. 아래 방법 중 하나로 서버에 있는 내 정보를 바로 지울 수 있습니다.</p>
+<ol>
+  <li><b>앱 안에서</b> (게스트 · 구글 로그인 모두): 앱 <b>설정 → 내 참여 기록 지우기</b></li>
+  <li><b>웹에서</b> (구글 로그인을 쓴 경우, 앱이 없어도 가능):
+    <div class="box"><a href="https://multi-app-api.multi-app-backend.workers.dev/account-deletion/neoman">https://multi-app-api.multi-app-backend.workers.dev/account-deletion/neoman</a><br>
+    페이지에서 Google 계정으로 본인 확인을 하면 즉시 지워집니다. 되돌릴 수 없습니다.</div></li>
+</ol>
+
+<h2>지워지는 데이터</h2>
+<ul>
+  <li>게스트 식별 정보(설치 식별자의 해시)와 구글 계정 연결 정보(Google 계정 고유 ID)</li>
+  <li>질문별로 처음 고른 답 — 질문별 A · B 합계에서도 빠집니다</li>
+  <li>구글 로그인 때 백업한 게임 기록</li>
+  <li>로그인 세션</li>
+</ul>
+
+<h2>남는 데이터와 보관 기간</h2>
+<ul>
+  <li>광고 제거 구매 정보(구매 토큰 · 주문 번호 · 상품 · 상태): 계정과의 연결은 끊고, 구매 복원과 환불 확인을 위해 서비스 종료 때까지 보관합니다. 같은 Google Play 계정으로 "구매 복원"을 하면 광고 제거를 다시 받을 수 있습니다.</li>
+  <li>이용자 식별자가 없는 서버 오류 기록, 보안을 위한 로그인 토큰 해시(약 1시간)</li>
+  <li>그 밖에 개발자가 따로 보관하는 데이터는 없습니다.</li>
+</ul>
+
+<h2>기기 안의 데이터</h2>
+<ul>
+  <li>최근 기록 20개: 앱의 <b>기록</b> 화면에서 하나씩 지우거나, 기기 <b>설정 → 애플리케이션 → 너만 그래? → 저장공간 → 데이터 삭제</b>(또는 앱 삭제)</li>
+  <li>구글 로그인 연결 해제: 앱에서 로그아웃하거나 <a href="https://myaccount.google.com/connections">Google 계정 → 타사 앱 및 서비스</a>에서 접근 권한 삭제</li>
+  <li>광고 관련 정보는 Google AdMob 이 처리하며, 기기의 <b>설정 → Google → 광고</b>에서 광고 ID 를 삭제할 수 있습니다.</li>
+</ul>
+
+<h2>주의</h2>
+<p>게스트로만 쓰다가 앱을 먼저 지우면 기기에 있던 설치 식별자도 함께 사라져, 서버에 남은 선택이 누구의 것인지 개발자도 알 수 없게 됩니다(본인 확인이 불가능해 개별 삭제를 할 수 없습니다).
+게스트 기록까지 지우려면 <b>앱을 지우기 전에</b> "내 참여 기록 지우기"를 해 주세요. 그 밖의 문의는 Google Play 스토어 등록정보의 개발자 연락처로 보내 주세요.</p>
+
+<p class="muted"><a href="privacy.html">개인정보처리방침</a> · <a href="terms.html">이용약관</a></p>
+
+<hr>
+<h1 style="font-size:22px">Data deletion (English)</h1>
+<p>"너만 그래?" (com.ainers1.neoman) starts as a guest; Google sign-in is optional. To delete your data from our server: in the app, open Settings → "내 참여 기록 지우기" (delete my participation data); or, if you used Google sign-in, visit <a href="https://multi-app-api.multi-app-backend.workers.dev/account-deletion/neoman">https://multi-app-api.multi-app-backend.workers.dev/account-deletion/neoman</a> and confirm with your Google account. Deletion is immediate and removes your guest/Google identity, your per-question answers (also subtracted from the totals), your game backups and sessions. Purchase records for "remove ads" are kept unlinked from your account for restore and refund checks. On-device history can be cleared in the app or via Android Settings → Apps → 너만 그래? → Storage → Clear data. If you uninstall the app as a guest before deleting, the install identifier is lost and the remaining answers can no longer be linked to you.</p>
+</body></html>
